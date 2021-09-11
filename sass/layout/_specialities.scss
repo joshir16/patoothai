@@ -13,6 +13,10 @@
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
+
   &__heading {
     font-size: 4rem;
     color: #0a005a;
@@ -25,6 +29,26 @@
     display: grid;
     grid-template-columns: repeat(8, min-content);
     grid-template-rows: repeat(8, 1fr);
+
+    @media only screen and (max-width: $bp-medium) {
+      background-image: radial-gradient(
+          circle,
+          rgba(0, 0, 0, 0.466),
+          rgba(0, 0, 0, 0.479)
+        ),
+        url(/img/gallery/specialities__bg.jpg);
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      grid-template-columns: repeat(8, 1fr);
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0;
+    }
   }
 
   &__img {
@@ -34,6 +58,12 @@
     width: 55rem;
     height: 52.5rem;
     box-shadow: 10px 10px 15px -5px rgb(116, 116, 116);
+
+    @media only screen and (max-width: $bp-medium) {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
   }
 
   &__menu {
@@ -50,6 +80,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+
+      padding: 5rem 3rem;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      min-width: 0rem;
+    }
 
     &__dish {
       width: 100%;
@@ -112,6 +152,7 @@
 
         color: #e98323;
         font-size: 1.4rem;
+        justify-self: center;
       }
     }
   }
