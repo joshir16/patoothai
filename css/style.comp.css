@@ -216,7 +216,6 @@ section {
     display: block;
     width: 5rem;
     height: 5rem;
-    border: 2px solid #0a005a;
     background-color: #e98323;
     z-index: 1001;
     display: none;
@@ -250,7 +249,8 @@ section {
         transition: all 0.5s ease; }
   @media only screen and (max-width: 50em) {
     .checkbox:checked ~ .navbar {
-      display: flex; }
+      display: flex;
+      justify-content: center; }
     .checkbox:checked ~ .checkbox__label span {
       background-color: transparent; }
     .checkbox:checked ~ .checkbox__label span::before {
@@ -303,7 +303,7 @@ section {
     position: relative; }
     @media only screen and (max-width: 50em) {
       .navbar__link {
-        font-size: 2.5rem; } }
+        font-size: 3.5rem; } }
     .navbar__link::after {
       content: "";
       position: absolute;

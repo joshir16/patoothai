@@ -32,7 +32,6 @@
     width: 5rem;
     height: 5rem;
 
-    border: 2px solid #0a005a;
     background-color: #e98323;
     z-index: 1001;
 
@@ -77,6 +76,7 @@
   @media only screen and (max-width: $bp-medium) {
     &:checked ~ .navbar {
       display: flex;
+      justify-content: center;
     }
 
     &:checked ~ &__label span {
@@ -157,7 +157,7 @@
     position: relative;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
     }
 
     &::after {
