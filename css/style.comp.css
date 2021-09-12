@@ -60,9 +60,142 @@ section {
   padding-bottom: 5rem !important; }
 
 /** @format */
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #e98323;
+  padding-bottom: 0% !important; }
+  .contact__container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-image: url(../location.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .contact__box {
+    background-color: #e98323;
+    max-width: 120rem;
+    width: 100%;
+    height: auto;
+    padding: 3rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+    align-items: center; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__box {
+        padding: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr); } }
+  .contact__text {
+    grid-column: 1 / 4;
+    color: #f5f5f5;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__text {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        width: auto; } }
+    .contact__text__heading {
+      font-size: 4rem; }
+    .contact__text__box {
+      display: flex; }
+      .contact__text__box__icon {
+        fill: #0a005a; }
+      .contact__text__box__para {
+        font-size: 2.2rem;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        padding-left: 2rem; }
+    .contact__text__note {
+      font-size: 1.8rem;
+      justify-self: flex-end; }
+  .contact__form {
+    grid-column: 4 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    padding-left: 5rem;
+    border-left: 3px solid #0a005a;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 5rem;
+    font-family: "Lato", sans-serif; }
+    @media only screen and (max-width: 62.5em) {
+      .contact__form {
+        gap: 3rem; } }
+    @media only screen and (max-width: 50em) {
+      .contact__form {
+        padding-left: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__form {
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+        padding-left: 0%;
+        padding: 5rem;
+        border-left: none;
+        border-top: 3px solid #0a005a; } }
+    .contact__form__box {
+      position: relative; }
+      .contact__form__box-1 {
+        grid-column: 1 / 3;
+        grid-row: 1/ 2; }
+      .contact__form__box-2 {
+        grid-column: 3 / -1;
+        grid-row: 1/ 2; }
+      .contact__form__box-3 {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3; }
+    .contact__form__input {
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #0a005a;
+      outline: none;
+      border: none;
+      position: relative; }
+      .contact__form__input::placeholder {
+        color: #0a005a; }
+    .contact__form__label {
+      font-size: 1.8rem;
+      padding: 0.75rem 1.5rem;
+      position: absolute;
+      top: -3.5rem;
+      left: 0rem;
+      transition: 0.3s ease-in; }
+    .contact__form__input:placeholder-shown ~ .contact__form__label {
+      opacity: 0;
+      visibility: 0;
+      transform: scaleY(-2rem); }
+    .contact__form__submit {
+      grid-column: 1 / 3;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border: none;
+      transition: 0.2s ease-in; }
+      .contact__form__submit:hover {
+        color: #fff;
+        background-color: #0a005a; }
+
+/** @format */
 .logo {
   position: fixed;
-  top: 2rem;
+  top: 1.25rem;
   left: 3rem;
   z-index: 1002;
   font-size: 2rem;
@@ -75,7 +208,7 @@ section {
 .checkbox {
   display: none; }
   .checkbox__label {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 3rem;
     display: block;

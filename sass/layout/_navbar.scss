@@ -2,7 +2,7 @@
 
 .logo {
   position: fixed;
-  top: 2rem;
+  top: 1.25rem;
   left: 3rem;
 
   z-index: 1002;
@@ -23,7 +23,7 @@
   display: none;
 
   &__label {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 3rem;
     display: block;
