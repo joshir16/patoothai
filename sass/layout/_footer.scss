@@ -2,7 +2,7 @@
 
 .footer {
   width: 100%;
-  height: 30rem;
+  height: 45rem;
 
   background-color: #0a005a;
   color: #fff;
@@ -14,8 +14,12 @@
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp-large) {
     flex-direction: column;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    height: 65rem;
   }
 
   &__credit {
@@ -46,11 +50,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 3rem;
+
+      @media only screen and (max-width: $bp-smallest) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
     }
   }
 
